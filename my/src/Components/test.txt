@@ -1,0 +1,54 @@
+import React,{useState} from 'react'
+
+function Addmovie({addNewmovie}) {
+   
+    const [show, setShow] = useState(false);
+    const handleClick = () => setShow(true);
+    return (
+      <div>
+        <button onClick={handleClick}>Add Movie</button>
+        {show ? <Show /> : null}
+      </div>
+    );
+  }
+ 
+  const Show = ({addNewmovie}) => {
+    const [Titl,setTitl]=useState("");
+    const [Description,setDescription]=useState("");
+    const [Poster,setPoster]= useState('');
+    const [Year,setYear]= useState('');
+    const [Rate,setRate]= useState('');
+
+    const  handleSubmit = () =>{
+        const newmovie = { Titl : Titl,
+             Description: Description,
+              Poster: Poster, 
+              Rate :Rate, 
+              Year : Year } 
+              console.log(newmovie);
+              addNewmovie=newmovie
+
+            };
+  
+  return(
+  <div  className='container'>
+      <form onSubmit={handleSubmit} addNewmovie={Titl,Description,Poster,Year,Rate}  >
+      <ul>
+     Title:<li><input className ='col col-sm-4'    placeholder='Type Title...'  value={Titl}
+       onChange={(e) => setTitl(e.target.value)}/ > </li> 
+     Poster:<li><input className ='col col-sm-4' placeholder='Type UrlPoster...'    value={Poster}
+       onChange={(e) => setPoster(e.target.value)}/></li> 
+      Description: <li><input className ='col col-sm-4' placeholder='Type Decription...' value={Description}
+       onChange={(e) => setDescription(e.target.value)}/> </li> 
+     Years: <li><input className ='col col-sm-4' placeholder='Type Years...'  value={Year}
+      onChange={(e) => setYear(e.target.value)}/> </li> 
+     Rate: <li><input className ='col col-sm-4'   type="number"  placeholder='Type Rtae/10...'  value={Rate}
+      onChange={(e) => setRate(e.target.value)}/> </li> 
+      </ul>
+      </form>
+      <button  onClick={handleSubmit}>Submit</button>
+    
+  </div>
+  )
+  }
+export default Addmovie
