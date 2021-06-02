@@ -1,6 +1,7 @@
 import React from 'react'
 
 import MovieCard from "./MovieCard";
+import { NavLink } from "react-router-dom";
 
 
 const MovieList = ({movies,serachTitle,srate}) => {
@@ -27,9 +28,9 @@ const MovieList = ({movies,serachTitle,srate}) => {
     < div >
     { movies.filter( movie =>{ return movie.Titl.toLowerCase().includes(serachTitle.toLowerCase()) &&
             movie.Rate >= srate })
-.map(({ Titl, Description, Poster, Rate, Year }, i) => (
+.map(({ Titl, Description, Poster, Rate, Year }, i) => ( <NavLink to={`/${Titl}`}>
         <MovieCard key={i} Titl={Titl} Description={Description} Poster={Poster} Rate={Rate} Year={Year} />
-      ))}
+        </NavLink> ))}
     
           
        

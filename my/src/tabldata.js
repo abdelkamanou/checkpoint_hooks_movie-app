@@ -3,7 +3,8 @@ export const tabldata = [{
     Poster : "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/space-movie-poster-design-template-18133e937d93002c68b4649ea234d75f_screen.jpg?ts=1573539500",
     Description : " Best movie",
     Rate : "5.2",
-    Year : "2019"
+    Year : "2019",
+    TrailerURL : "https://www.youtube.com/embed/CQMFckAuyEA"
 
 },
 {
@@ -12,6 +13,8 @@ export const tabldata = [{
     Description : "Best movie",
     Rate : "7.4",
     Year : "1017",
+    TrailerURL : "https://www.youtube.com/embed/W3zevquuoO8"
+
 
 },
 
@@ -21,6 +24,7 @@ export const tabldata = [{
     Description : "Best movie",
     Rate : "6.8",
     Year : "2018",
+    TrailerURL : "https://www.youtube.com/embed/n6ihJIjVGLo"
 
 },
 {
@@ -29,6 +33,7 @@ export const tabldata = [{
     Description : "Best movie",
     Rate : "9.6",
     Year : "2020",
+    TrailerURL : "https://www.youtube.com/embed/zAGVQLHvwOY"
+
 
 }]
-console.log(typeof Rate) 

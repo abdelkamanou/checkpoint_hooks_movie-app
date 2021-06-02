@@ -31,7 +31,7 @@ export const SearchRate = ({Rate,setRate}) => {
 				onClick={() => setRate(i)}
 			  >
 				{" "}
-				★{" "}
+				★{''}
 			  </span>
 			);
 		  } else {
@@ -42,8 +42,9 @@ export const SearchRate = ({Rate,setRate}) => {
 				onClick={() => setRate(i)}
 			  >
 				{" "}
-				★{" "}
+				★{""} 
 			  </span>
+			 
 			);
 		  }
 		}

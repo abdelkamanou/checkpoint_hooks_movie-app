@@ -52,3 +52,31 @@ function Addmovie({addNewmovie}) {
   )
   }
 export default Addmovie
+
+
+
+import React,{useState} from 'react'
+function Open({movies}) {
+
+    const [movie,setMovie]= useState("")
+    useEffect(() => {
+        const openmovie = movies.find((movie)=> movie.Titl===Titl);
+        setMovie(openmovie)
+        return () => {
+            cleanup
+        }
+    }, [input])
+  
+    return (
+        <div>
+           <div>
+            {movie.Titl}
+        </div>
+            <div>
+                {movie.Description}
+        </div>
+        </div>
+    )
+}
+
+export default Open

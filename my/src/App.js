@@ -5,6 +5,8 @@ import MovieList from "./Components/MovieList";
 import {tabldata} from "./tabldata"
 import {SerachTitle,SearchRate} from "./Components/Filter"
 import Addmovie from "./Components/Addmovie"
+import {BrowserRouter,Route, Switch} from 'react-router-dom'
+import Open from "./Components/Open"
 
 
 function App() {
@@ -21,12 +23,19 @@ function App() {
   const [serachTitle, setSearchTitle] = useState("");
   const filtredmovies =(movie)=> setSearchTitle(movie)
 
-  
-
-
 
   return (
+    <BrowserRouter>
+    <Switch>
+    <Route
+          path="/:Titl"
+          exact
+          render={() => (
+          <Open movies={moviesList}/>
+          )}
+        />
     <div className="App">
+
        <SearchRate Rate={searchrate} setRate={setSearchRate} filtredmoviesrate={filtredmoviesrate} />
       <SerachTitle filtredmovies ={filtredmovies} />
       <div>
@@ -34,6 +43,8 @@ function App() {
       <MovieList movies = {moviesList} serachTitle ={serachTitle} srate={searchrate} />
 
     </div>
+    </Switch>
+    </BrowserRouter>
   );
 };
 

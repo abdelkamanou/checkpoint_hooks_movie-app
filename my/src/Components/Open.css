@@ -1,0 +1,15 @@
+.centent{
+  display: flex;
+  padding: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.btnn{
+    background-color: #f44336;
+    color: white;
+    margin-bottom :50px
+
+
+
+}
